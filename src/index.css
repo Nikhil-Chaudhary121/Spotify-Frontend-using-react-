@@ -1,0 +1,567 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.main-container {
+  color: #fff;
+  background-color: #000;
+  /* overflow: hidden; */
+}
+
+*::-webkit-scrollbar {
+  display: none;
+}
+.card-play-icon {
+  opacity: 0;
+  transition: opacity 0.3s linear;
+}
+.h-play-card {
+  transition: all 0.2s ease-in-out;
+}
+.h-play-card:hover {
+  background-color: #343434;
+}
+.h-play-card:hover .card-play-icon,
+.h-play-card {
+  opacity: 1;
+}
+.v-card:hover .card-play-icon {
+  opacity: 1;
+}
+
+.player-icons {
+  transition: all 0.2s ease-in-out;
+}
+
+.player-icons:hover {
+  opacity: 1;
+  scale: 1.1;
+}
+
+.mobile-music-player {
+  display: none !important;
+  opacity: 0;
+}
+
+.PlayerOptions {
+  transform: translateX(50%);
+  top: 20%;
+}
+
+.v-card {
+  transition: all 0.1s ease-in-out;
+}
+.v-card-btn {
+  position: absolute;
+  bottom: 0;
+  left: 100%;
+  transform: translateX(-60%);
+}
+.v-card:hover {
+  background-color: #282828;
+}
+
+.vol-bar {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 70px;
+  cursor: pointer;
+  outline: none;
+  border-radius: 15px;
+  height: 3px;
+  background: #ccc;
+}
+
+.vol-bar::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 12px;
+  width: 12px;
+  background-color: #1bd760;
+  border-radius: 50%;
+  border: none;
+  transition: all 2s linear;
+}
+
+.vol-bar::-moz-range-thumb {
+  height: 12px;
+  width: 12px;
+  background-color: rgb(27, 215, 96);
+  border-radius: 50%;
+  border: none;
+  transition: all 2s linear;
+}
+
+.vol-bar::-webkit-slider-thumb:hover {
+  box-shadow: 0 0 0 5px rgba(27, 215, 96, 0.1);
+}
+.vol-bar:active::-webkit-slider-thumb {
+  box-shadow: 0 0 0 6.5px rgba(27, 215, 96, 0.2);
+}
+.vol-bar:focus::-webkit-slider-thumb {
+  box-shadow: 0 0 0 7px rgba(27, 215, 96, 0.2);
+}
+
+.vol-bar::-moz-range-thumb:hover {
+  box-shadow: 0 0 0 10px rgba(27, 215, 96, 0.1);
+}
+.vol-bar:active::-moz-range-thumb {
+  box-shadow: 0 0 0 13px rgba(27, 215, 96, 0.2);
+}
+.vol-bar:focus::-moz-range-thumb {
+  box-shadow: 0 0 0 13px rgba(27, 215, 96, 0.2);
+}
+
+.prog-bar {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 350px;
+  cursor: pointer;
+  outline: none;
+  border-radius: 15px;
+  height: 3px;
+  background: #ccc;
+}
+
+.prog-bar::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 8px;
+  width: 8px;
+  background-color: #1bd760;
+  border-radius: 50%;
+  border: none;
+  transition: all 2s linear;
+}
+
+.prog-bar::-moz-range-thumb {
+  height: 8px;
+  width: 8px;
+  background-color: rgb(27, 215, 96);
+  border-radius: 50%;
+  border: none;
+  transition: all 2s linear;
+}
+
+.prog-bar::-webkit-slider-thumb:hover {
+  box-shadow: 0 0 0 5px rgba(27, 215, 96, 0.1);
+}
+.prog-bar:active::-webkit-slider-thumb {
+  box-shadow: 0 0 0 6.5px rgba(27, 215, 96, 0.2);
+}
+.prog-bar:focus::-webkit-slider-thumb {
+  box-shadow: 0 0 0 7px rgba(27, 215, 96, 0.2);
+}
+
+.prog-bar::-moz-range-thumb:hover {
+  box-shadow: 0 0 0 10px rgba(27, 215, 96, 0.1);
+}
+.prog-bar:active::-moz-range-thumb {
+  box-shadow: 0 0 0 13px rgba(27, 215, 96, 0.2);
+}
+.prog-bar:focus::-moz-range-thumb {
+  box-shadow: 0 0 0 13px rgba(27, 215, 96, 0.2);
+}
+
+.nav-icons {
+  font-size: 40px !important;
+  background-color: #121212;
+  color: #fff;
+  padding: 10px;
+  border-radius: 50%;
+}
+
+.card-link:hover {
+  text-decoration: none !important;
+}
+
+.ablum {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(0, -50%);
+}
+
+.song-card:hover {
+  background-color: #2828286c;
+}
+
+.song-card {
+  transition: all 0.15s ease-in-out cubic-bezier(0.95, 0.05, 0.795, 0.035);
+}
+
+.hover-unhide {
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
+}
+
+.song-card:hover .hover-unhide {
+  opacity: 1;
+}
+.bot-nav {
+  display: none !important;
+}
+
+#siderbar {
+  width: 35vw !important;
+  min-width: 250px !important;
+}
+@media (max-width: 1600px) {
+  .hide-on-1600 {
+    display: none !important;
+  }
+}
+
+@media (max-width: 1165px) {
+  .v-card {
+    min-width: 40% !important;
+  }
+  .ablum {
+    display: none !important;
+  }
+  .banner-title {
+    font-size: 55px !important;
+  }
+  .banner-img {
+    height: 180px !important;
+  }
+}
+
+@media (max-width: 1070px) {
+  .v-card {
+    width: 46% !important;
+    min-width: 150px !important;
+  }
+  .hide-on-1000 {
+    display: none !important;
+  }
+  /* .h-play-card{
+      width: 49%!important;
+    }
+    .hcard-text{
+      font-size: 12px !important;
+    }
+    .hcard-img{
+      width: 62px !important;
+    }
+    .h-card-container{
+      gap: 8px !important;
+    }  */
+  .banner-title {
+    font-size: 38px !important;
+  }
+  .banner-img {
+    height: 120px !important;
+  }
+}
+
+@media (max-width: 1070px) {
+  .h-play-card {
+    width: 98% !important;
+    max-width: none !important;
+  }
+  .hcard-text {
+    font-size: 16px !important;
+  }
+  .hcard-img {
+    width: 58px !important;
+  }
+  .h-card-container {
+    gap: 15px !important;
+  }
+}
+@media (max-width: 900px) {
+  .hide-on-900 {
+    display: none !important;
+  }
+  .useless-icons-900 {
+    display: none !important;
+  }
+  .musicplayer {
+    position: relative;
+  }
+  .prog-bar {
+    width: 200px !important;
+  }
+  .banner-title {
+    font-size: 65px !important;
+  }
+
+  #siderbar {
+    width: 10vw !important;
+    min-width: 90px !important;
+  }
+  .siderbar-part {
+    gap: 0 !important;
+    justify-content: center !important;
+  }
+  .siderbar-box {
+    padding: 5px !important;
+  }
+  .h-play-card {
+    width: 48% !important;
+    max-width: 49% !important;
+  }
+  .hcard-text {
+    font-size: 14px !important;
+  }
+  .hcard-img {
+    width: 58px !important;
+  }
+  .h-card-container {
+    gap: 15px !important;
+  }
+}
+@media (max-width: 800px) {
+  .h-play-card {
+    width: 98% !important;
+    max-width: none !important;
+  }
+  .hcard-text {
+    font-size: 16px !important;
+  }
+  .hcard-img {
+    width: 58px !important;
+  }
+  .h-card-container {
+    gap: 15px !important;
+  }
+}
+
+@media (max-width: 740px) {
+  .banner-title {
+    font-size: 30px !important;
+  }
+  .banner-img {
+    height: 100px !important;
+  }
+}
+@media (max-width: 700px) {
+  .useless-icons-700 {
+    display: none;
+  }
+  .PlayerOptions {
+    right: 45%;
+  }
+  .song-name {
+    font-size: 14px !important;
+  }
+  .banner-des {
+    font-size: 12px !important;
+  }
+}
+
+/* @media (max-width : 670px){
+    .h-play-card{
+      width: 99%!important;
+    }
+    .hcard-text{
+      font-size: 12px !important;
+    }
+    .hcard-img{
+      width: 62px !important;
+    }
+    .h-card-container{
+      gap: 15px !important;
+    } 
+    
+   } */
+@media (max-width: 650px) {
+  .v-card {
+    width: 96% !important;
+    min-width: 300px !important;
+  }
+  .right-siderbar {
+    min-width: 150px !important;
+  }
+  .card-play-icon {
+    display: none !important;
+  }
+  .PlayerOptions {
+    right: 43% !important;
+  }
+  .prog-bar {
+    width: 180px !important;
+  }
+}
+@media (max-width: 620px) {
+  .h-play-card {
+    width: 49% !important;
+    max-width: 49% !important;
+  }
+  .hcard-text {
+    font-size: 12px !important;
+  }
+  .hcard-img {
+    width: 52px !important;
+  }
+  .h-card-container {
+    gap: 10px !important;
+  }
+}
+@media (max-width: 610px) {
+  .right-siderbar {
+    display: none !important;
+  }
+  .v-card {
+    width: 46% !important;
+    min-width: 150px !important;
+  }
+  .h-play-card {
+    width: 48% !important;
+  }
+  .hcard-text {
+    font-size: 12px !important;
+  }
+  .hcard-img {
+    width: 62px !important;
+  }
+  .h-card-container {
+    gap: 8px !important;
+  }
+  .PlayerOptions {
+    right: 33% !important;
+  }
+  .useless-icons-600 {
+    display: none !important;
+  }
+}
+@media (max-width: 520px) {
+}
+.h-play-card {
+  width: 98% !important;
+}
+.hcard-text {
+  font-size: 16px !important;
+}
+.hcard-img {
+  width: 58px !important;
+}
+.h-card-container {
+  gap: 15px !important;
+  .prog-bar {
+    width: 150px !important;
+  }
+}
+
+@media (max-width: 430px) {
+  #siderbar {
+    display: none !important;
+  }
+  .musicplayer {
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90% !important;
+    bottom: 62px !important;
+    border-radius: 10px !important;
+    background-color: #262626 !important;
+  }
+  .hide-on-mobile {
+    display: none !important;
+  }
+  .prog-details {
+    display: none !important;
+  }
+  .bot-nav {
+    display: inherit !important;
+    bottom: 0;
+  }
+  .prog-bar::-moz-range-thumb {
+    height: 4px !important;
+    width: 4px !important;
+  }
+  .prog {
+    display: none !important;
+    position: absolute !important;
+    bottom: -0%;
+    width: 80vw !important;
+  }
+  .PlayerOptions {
+    right: 0 !important;
+    transform: translate(-10%, 40%);
+  }
+  .h-play-card {
+    width: 49% !important;
+  }
+  .hcard-text {
+    font-size: 12px !important;
+  }
+  .hcard-img {
+    width: 50px !important;
+  }
+  .h-card-container {
+    gap: 8px !important;
+    .prog-bar {
+      width: 150px !important;
+    }
+  }
+  .mobile-music-player {
+    display: inherit !important;
+    position: absolute !important;
+    opacity: 1;
+    top: 0%;
+  }
+}
+
+@media (max-width: 390px) {
+  .banner-title {
+    font-size: 26px !important;
+  }
+  .banner-img {
+    height: 90px !important;
+  }
+  .banner-des {
+    font-size: 10px !important;
+  }
+}
+
+.prog-mob-bar {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  cursor: pointer;
+  outline: none;
+  border-radius: 15px;
+  height: 4px;
+  background: #ccc;
+}
+
+.prog-mob-bar::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 10px;
+  width: 10px;
+  background-color: #1bd760;
+  border-radius: 50%;
+  border: none;
+  transition: all 2s linear;
+}
+
+.prog-mob-bar::-moz-range-thumb {
+  height: 10px;
+  width: 10px;
+  background-color: rgb(27, 215, 96);
+  border-radius: 50%;
+  border: none;
+  transition: all 2s linear;
+}
+
+.prog-mob-bar::-webkit-slider-thumb:hover {
+  box-shadow: 0 0 0 5px rgba(27, 215, 96, 0.1);
+}
+.prog-mob-bar:active::-webkit-slider-thumb {
+  box-shadow: 0 0 0 6.5px rgba(27, 215, 96, 0.2);
+}
+.prog-mob-bar:focus::-webkit-slider-thumb {
+  box-shadow: 0 0 0 7px rgba(27, 215, 96, 0.2);
+}
+
+.prog-mob-bar::-moz-range-thumb:hover {
+  box-shadow: 0 0 0 10px rgba(27, 215, 96, 0.1);
+}
+.prog-mob-bar:active::-moz-range-thumb {
+  box-shadow: 0 0 0 13px rgba(27, 215, 96, 0.2);
+}
+.prog-mob-bar:focus::-moz-range-thumb {
+  box-shadow: 0 0 0 13px rgba(27, 215, 96, 0.2);
+}
